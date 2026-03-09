@@ -1,0 +1,143 @@
+/* =============================================
+   BAKERY STYLES — Exercise 16-1
+   Flexbox Navigation Bar
+   ============================================= */
+
+/* General body styles */
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF8DC;
+    color: #2F4F4F;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #8B4513;
+    color: #FFF8DC;
+    text-align: center;
+    padding: 1em;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #FFF8DC;
+}
+
+nav {
+    background-color: #5C3317;
+    padding: 0;
+}
+
+/* =============================================
+   EXERCISE 16-1 STEP 1:
+   Make the ul element in the nav element as
+   neutral as possible by removing default
+   margin, padding, and list bullets.
+   ============================================= */
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    /* =============================================
+       EXERCISE 16-1 STEP 1 (continued):
+       Turn the ul into a flexbox container.
+       All li elements inside become flex items.
+       Because we want rows with no wrapping,
+       the default values for flex-direction (row)
+       and flex-wrap (nowrap) are fine and omitted.
+       ============================================= */
+    display: flex;
+
+    /* =============================================
+       EXERCISE 16-1 STEP 3:
+       Center the navigation menu in the width
+       of the nav section using justify-content.
+       ============================================= */
+    justify-content: center;
+}
+
+/* =============================================
+   EXERCISE 16-1 STEP 2:
+   Style the anchor elements inside the nav
+   list items as block elements. Give them
+   1px rounded borders, padding (.5em top/bottom,
+   1em left/right), and .5em margins to give
+   them space and open up the navigation bar.
+   ============================================= */
+nav ul li a {
+    display: block;
+    border: 1px solid;
+    border-radius: .5em;
+    padding: .5em 1em;
+    margin: .5em;
+
+    /* Color to suit the bakery theme */
+    color: #FFF8DC;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #8B4513;
+    color: #FFD700;
+}
+
+/* =============================================
+   General page styles
+   ============================================= */
+main {
+    padding: 1.5em 2em;
+}
+
+h1, h2 {
+    color: #8B4513;
+}
+
+h2 {
+    color: #D2691E;
+    font-size: 1.5em;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #CD853F;
+}
+
+a:link {
+    color: #B8860B;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:visited {
+    color: #8B7355;
+}
+
+a:hover {
+    color: #FF8C00;
+    text-decoration: underline;
+}
+
+.floatleft {
+    float: left;
+    margin: 0 20px 15px 0;
+}
+
+.floatright {
+    float: right;
+    margin: 0 0 15px 20px;
+}
+
+footer {
+    background-color: #5C3317;
+    color: #FFF8DC;
+    text-align: center;
+    padding: 1em;
+    font-size: 0.9em;
+    margin-top: 2em;
+}

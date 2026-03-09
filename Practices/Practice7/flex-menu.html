@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bistro Items to Go</title>
+    <style>
+
+/* =============================================
+   BASE / COSMETIC STYLES
+   (colors, fonts, borders, spacing — provided)
+   ============================================= */
+body {
+    font-family: Georgia, serif;
+    font-size: 100%;
+    background-color: #d9e8c4;
+    margin: 1em 2em;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #783F27;
+    font-size: 1.8em;
+    margin-bottom: .25em;
+}
+
+h2 {
+    font-size: .95em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: #783F27;
+    margin: 0 0 .5em 0;
+    text-align: center;
+}
+
+p {
+    font-size: .9em;
+    line-height: 1.5;
+    margin: 0 0 .5em 0;
+}
+
+.price {
+    font-style: italic;
+    color: #783F27;
+    font-weight: bold;
+    font-size: .95em;
+
+    /* ----- EXERCISE 16-2 STEP 7 -----
+       Push price to the bottom of each item
+       using the margin-top: auto trick.
+       This works because each section is now
+       a column flex container (see section rule). */
+    margin-top: auto;
+
+    padding: .4em 0 0 0;
+}
+
+/* ----- EXERCISE 16-3 STEP 2 (optional) -----
+   Set images to 100% width so they always
+   fill the full width of their container. */
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* =============================================
+   EXERCISE 16-2 STEP 1:
+   Make #menu a flex container by setting
+   display to flex. All section elements
+   inside become flex items.
+   Default behavior at this point:
+     - Each item is the full height of #menu
+     - Sections keep their 240px width
+     - Content may be clipped at browser edge
+   ============================================= */
+#menu {
+    border: 3px solid #783F27;
+    display: flex;
+
+    /* ----- EXERCISE 16-2 STEP 2 -----
+       Try flex-direction values to explore item order.
+       Tried values (each tried, then reverted):
+         flex-direction: row-reverse;
+         flex-direction: column;
+         flex-direction: column-reverse;
+       Final value set back to row (the default). */
+    flex-direction: row;
+
+    /* ----- EXERCISE 16-2 STEP 3 -----
+       Try align-items values to explore cross-axis alignment.
+       Tried values (each tried, then reverted):
+         align-items: flex-start;
+         align-items: flex-end;
+         align-items: center;
+         align-items: baseline;
+       Final value set back to stretch (the default). */
+    align-items: stretch;
+
+    /* ----- EXERCISE 16-2 STEP 4 -----
+       Add flex-wrap: wrap so items wrap onto
+       multiple lines instead of staying in one
+       clipped row. Resize the browser to watch
+       the lines rewrap. */
+    flex-wrap: wrap;
+
+    /* ----- EXERCISE 16-2 STEP 5 -----
+       The two declarations above (flex-direction
+       and flex-wrap) can be replaced with the
+       single flex-flow shorthand:
+         flex-flow: row wrap;
+       Both approaches are equivalent. The
+       individual properties are kept here so
+       each step remains visible. */
+
+    /* ----- EXERCISE 16-2 STEP 6 -----
+       Center items along the main axis on
+       each flex line. Other values explored:
+         justify-content: flex-start;
+         justify-content: flex-end;
+         justify-content: space-between;
+         justify-content: space-around;
+       Final value: center. */
+    justify-content: center;
+}
+
+
+/* =============================================
+   EXERCISE 16-2 STEP 7:
+   Make each section a nested flex container
+   with flex-direction: column so h2, p, and
+   .price stack vertically. This enables the
+   margin-top: auto trick on .price above.
+
+   EXERCISE 16-3 STEP 1:
+   Add flex: auto (same as flex: 1 1 auto) so
+   items grow and shrink to fill all available
+   space rather than leaving empty gaps.
+   ============================================= */
+section {
+    width: 240px;
+    border: 1px solid #783F27;
+    margin: .5em;
+    padding: .75em;
+    background-color: rgba(255, 255, 255, 0.6);
+
+    /* Step 7: nested flex container, column direction */
+    display: flex;
+    flex-direction: column;
+
+    /* Exercise 16-3 Step 1: fill available space */
+    flex: auto;
+}
+
+
+/* =============================================
+   EXERCISE 16-3 STEP 2:
+   Use the order property on .photo to move
+   the photo paragraph to the top of each item.
+   A value less than the default (0) places it
+   first in the visual order.
+   ============================================= */
+.photo {
+    order: -1;
+}
+
+    </style>
+</head>
+<body>
+
+<h1>Bistro Items to Go</h1>
+
+<div id="menu">
+
+    <section>
+        <h2>1. Smoked Salmon</h2>
+        <p class="photo"><img src="../Practice5B/images/gooseshadow.png" alt="Smoked Salmon"></p>
+        <p>House-cured Atlantic salmon with capers, red onion, and cream cheese on toasted bagel rounds.</p>
+        <p class="price">$8.95</p>
+    </section>
+
+    <section>
+        <h2>2. Wild Mushroom Tart</h2>
+        <p class="photo"><img src="../Practice5B/images/gooseshadow.png" alt="Wild Mushroom Tart"></p>
+        <p>A savory blend of seasonal wild mushrooms, gruyere, and fresh thyme in a flaky butter crust.</p>
+        <p class="price">$7.50</p>
+    </section>
+
+    <section>
+        <h2>3. Roasted Chicken</h2>
+        <p class="photo"><img src="../Practice5B/images/gooseshadow.png" alt="Roasted Chicken"></p>
+        <p>Free-range half chicken roasted with garlic, lemon, and rosemary. Served with seasonal vegetables and au jus.</p>
+        <p class="price">$14.95</p>
+    </section>
+
+    <section>
+        <h2>4. Lobster Bisque</h2>
+        <p class="photo"><img src="../Practice5B/images/gooseshadow.png" alt="Lobster Bisque"></p>
+        <p>Rich, velvety bisque made with fresh Maine lobster, cognac, and a touch of cream. Topped with a lobster claw.</p>
+        <p class="price">$9.95</p>
+    </section>
+
+    <section>
+        <h2>5. Grilled Filet Mignon</h2>
+        <p class="photo"><img src="../Practice5B/images/gooseshadow.png" alt="Filet Mignon"></p>
+        <p>8 oz center-cut filet grilled to your preference. Served with truffle butter, asparagus, and potato gratin.</p>
+        <p class="price">$28.95</p>
+    </section>
+
+    <section>
+        <h2>6. Creme Brulee</h2>
+        <p class="photo"><img src="../Practice5B/images/gooseshadow.png" alt="Creme Brulee"></p>
+        <p>Classic French vanilla custard with a perfectly caramelized sugar crust. Garnished with fresh seasonal berries.</p>
+        <p class="price">$6.50</p>
+    </section>
+
+    <section>
+        <h2>7. Cheese Board</h2>
+        <p class="photo"><img src="../Practice5B/images/gooseshadow.png" alt="Cheese Board"></p>
+        <p>A curated selection of artisanal cheeses, house-made jam, honeycomb, candied walnuts, and artisan crackers.</p>
+        <p class="price">$16.00</p>
+    </section>
+
+    <section>
+        <h2>8. Seared Duck Breast</h2>
+        <p class="photo"><img src="../Practice5B/images/gooseshadow.png" alt="Seared Duck Breast"></p>
+        <p>Pan-seared duck breast with cherry gastrique, braised red cabbage, and creamy polenta. A bistro classic.</p>
+        <p class="price">$19.95</p>
+    </section>
+
+</div>
+
+</body>
+</html>

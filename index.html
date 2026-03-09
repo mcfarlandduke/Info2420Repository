@@ -3,121 +3,307 @@
 <head>
     <meta charset="UTF-8">
     <title>Duke McFarland's Home Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF8DC;
+            color: #2F4F4F;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #8B4513;
+            color: #FFF8DC;
+            text-align: center;
+            padding: 2em 1em;
+        }
+
+        header h1 {
+            margin: 0 0 .25em 0;
+            font-size: 2.2em;
+            color: #FFF8DC;
+        }
+
+        header p {
+            margin: 0;
+            font-style: italic;
+            font-size: 1.1em;
+            color: #F5DEB3;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 2em auto;
+            padding: 0 2em;
+        }
+
+        /* ---- Section headings ---- */
+        h2 {
+            color: #8B4513;
+            font-size: 1.5em;
+            border-bottom: 2px solid #D2691E;
+            padding-bottom: .3em;
+            margin-top: 1.8em;
+        }
+
+        h3 {
+            color: #D2691E;
+            font-size: 1.1em;
+            margin: 1.2em 0 .4em 0;
+        }
+
+        /* ---- Card grid ---- */
+        .card-grid {
+            display: flex;
+            flex-flow: row wrap;
+            gap: 1em;
+            margin-top: .75em;
+        }
+
+        .card {
+            background-color: #FAEBD7;
+            border: 1px solid #D2691E;
+            border-radius: .5em;
+            padding: 1em 1.2em;
+            flex: 1 1 260px;
+            max-width: 320px;
+        }
+
+        .card .card-label {
+            display: inline-block;
+            background-color: #8B4513;
+            color: #FFF8DC;
+            font-size: .75em;
+            font-variant: small-caps;
+            letter-spacing: .05em;
+            padding: .15em .5em;
+            border-radius: .25em;
+            margin-bottom: .5em;
+        }
+
+        .card p {
+            font-size: .9em;
+            margin: 0 0 .75em 0;
+            color: #5C3317;
+        }
+
+        .card a {
+            display: inline-block;
+            color: #8B4513;
+            font-weight: bold;
+            text-decoration: none;
+            border: 1px solid #8B4513;
+            border-radius: .3em;
+            padding: .2em .6em;
+            font-size: .9em;
+            margin-top: .1em;
+        }
+
+        .card a:hover {
+            background-color: #8B4513;
+            color: #FFF8DC;
+        }
+
+        /* multiple links in one card */
+        .card .link-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .card .link-list li {
+            margin-bottom: .4em;
+        }
+
+        /* highlight badge for new practice */
+        .card.new {
+            border-color: #8B4513;
+            border-width: 2px;
+            background-color: #FFF0D0;
+        }
+
+        .card.new .card-label {
+            background-color: #D2691E;
+        }
+
+        footer {
+            background-color: #5C3317;
+            color: #FFF8DC;
+            text-align: center;
+            padding: 1em;
+            font-size: .9em;
+            margin-top: 3em;
+        }
+    </style>
 </head>
-
 <body>
-    <h1>Home Page for Duke McFarland</h1>
 
-    <hr>
+<header>
+    <h1>Duke McFarland</h1>
+    <p>INFO 2420 &mdash; Web Design Portfolio</p>
+</header>
 
+<main>
+
+    <!-- ==================== PROJECTS ==================== -->
     <h2>Projects</h2>
-    <ul>
-        <li>
-            <a href="Projects/project1.htm">
-                Web Site Critique (Project 1)
-            </a>
-        </li>
-        <li>
-            <a href="Projects/project2/AboutUs.html">
-                About Us - Native Cooking of Utah (Project 2)
-            </a>
-        </li>
-        <li>
-            <a href="Projects/project2/Tributes.html">
-                Tributes - Native Cooking of Utah (Project 2)
-            </a>
-        </li>
-        <li>
-            <a href="Projects/Project3/AboutUs.html">
-                About Us - Native Cooking of Utah (Project 3)
-            </a>
-        </li>
-        <li>
-            <a href="Projects/Project3/Tributes.html">
-                Tributes - Native Cooking of Utah (Project 3)
-            </a>
-        </li>
-        <li>
-            <a href="Projects/Project3/SiteDesign.html">
-                Site Design - Native Cooking of Utah (Project 3)
-            </a>
-        </li>
-        <li>
-            <a href="Projects/Project4/AboutUs.html">
-                About Us - Native Cooking of Utah (Project 4)
-            </a>
-        </li>
-        <li>
-            <a href="Projects/Project4/Tributes.html">
-                Tributes - Native Cooking of Utah (Project 4)
-            </a>
-        </li>
-    </ul>
-    
-    <hr>
 
+    <h3>Project 1</h3>
+    <div class="card-grid">
+        <div class="card">
+            <span class="card-label">Project 1</span>
+            <p>Web Site Critique</p>
+            <a href="Projects/project1.htm">View Project</a>
+        </div>
+    </div>
+
+    <h3>Project 2 — Native Cooking of Utah</h3>
+    <div class="card-grid">
+        <div class="card">
+            <span class="card-label">Project 2</span>
+            <p>About Us page for Native Cooking of Utah.</p>
+            <a href="Projects/project2/AboutUs.html">About Us</a>
+        </div>
+        <div class="card">
+            <span class="card-label">Project 2</span>
+            <p>Tributes page for Native Cooking of Utah.</p>
+            <a href="Projects/project2/Tributes.html">Tributes</a>
+        </div>
+    </div>
+
+    <h3>Project 3 — Native Cooking of Utah</h3>
+    <div class="card-grid">
+        <div class="card">
+            <span class="card-label">Project 3</span>
+            <p>About Us page with enhanced styling.</p>
+            <a href="Projects/Project3/AboutUs.html">About Us</a>
+        </div>
+        <div class="card">
+            <span class="card-label">Project 3</span>
+            <p>Tributes page with enhanced styling.</p>
+            <a href="Projects/Project3/Tributes.html">Tributes</a>
+        </div>
+        <div class="card">
+            <span class="card-label">Project 3</span>
+            <p>Site design document.</p>
+            <a href="Projects/Project3/SiteDesign.html">Site Design</a>
+        </div>
+    </div>
+
+    <h3>Project 4 — Native Cooking of Utah</h3>
+    <div class="card-grid">
+        <div class="card">
+            <span class="card-label">Project 4</span>
+            <p>About Us page with tables and custom fonts.</p>
+            <a href="Projects/Project4/AboutUs.html">About Us</a>
+        </div>
+        <div class="card">
+            <span class="card-label">Project 4</span>
+            <p>Tributes page with tables and custom fonts.</p>
+            <a href="Projects/Project4/Tributes.html">Tributes</a>
+        </div>
+    </div>
+
+
+    <!-- ==================== PRACTICES ==================== -->
     <h2>Practice Assignments</h2>
-    <ul>
-        <li>
-            <a href="Practices/Practice2/cactus.html">
-                Practice 2 – Cactus Page
-            </a>
-        </li>
-        <li>
-            <a href="Practices/Practice2/HTMLPractice2.pdf">
-                Practice 2 – Instructions (PDF)
-            </a>
-        </li>
-        <li>
-            <a href="Practices/Practice3/HTML3Files/index.html">
-                Practice 3 – HTML3
-            </a>
-        </li>
-        <li>
-            <a href="Practices/Practice3/practice3b/glossary.html">
-                Practice 3B – Glossary
-            </a>
-        </li>
-        <li>
-            <a href="Practices/Practice4/HTML4A/index.html">
-                Practice 4A – CSS Text Formatting
-            </a>
-        </li>
-        <li>
-            <a href="Practices/Practice4/CSS3Fonts/CSS3Fonts.html">
-                Practice 4B – CSS3 Embedded Fonts
-            </a>
-        </li>
-        <li>
-            <a href="Practices/Practice5A/index.html">
-                Practice 5A – Butterflies and Moths
-            </a>
-        </li>
-        <li>
-            <a href="Practices/Practice5B/bistro.html">
-                Practice 5B – Black Goose Bistro Summer Menu
-            </a>
-        </li>
-        <li>
-            <a href="Practices/Practice6A/Practice6A-Tables.html">
-                Practice 6A – Tables (Exercises 8.1, 8.2, 8.3)
-            </a>
-        </li>
-        <li>
-            <a href="Practices/Practice6B/table.html">
-                Practice 6B – Class Schedule Table
-            </a>
-        </li>
-        <li>
-            <a href="Practices/Week7-8-Photoshop/index.html">
-                Practice – Week 7 &amp; 8 (Photoshop)
-            </a>
-        </li>
-    </ul>
 
-    <hr>
+    <h3>Practice 2</h3>
+    <div class="card-grid">
+        <div class="card">
+            <span class="card-label">Practice 2</span>
+            <p>Basic HTML page about a cactus.</p>
+            <a href="Practices/Practice2/cactus.html">Cactus Page</a>
+        </div>
+        <div class="card">
+            <span class="card-label">Practice 2</span>
+            <p>Practice 2 instructions PDF.</p>
+            <a href="Practices/Practice2/HTMLPractice2.pdf">Instructions (PDF)</a>
+        </div>
+    </div>
 
-    <h2>Fonts</h2>
-    <p>Font resources will go here.</p>
+    <h3>Practice 3</h3>
+    <div class="card-grid">
+        <div class="card">
+            <span class="card-label">Practice 3</span>
+            <p>Multi-page HTML site with internal navigation.</p>
+            <a href="Practices/Practice3/HTML3Files/index.html">HTML3 Site</a>
+        </div>
+        <div class="card">
+            <span class="card-label">Practice 3B</span>
+            <p>HTML glossary page with definition lists.</p>
+            <a href="Practices/Practice3/practice3b/glossary.html">Glossary</a>
+        </div>
+    </div>
+
+    <h3>Practice 4</h3>
+    <div class="card-grid">
+        <div class="card">
+            <span class="card-label">Practice 4A</span>
+            <p>CSS text formatting exercises.</p>
+            <a href="Practices/Practice4/HTML4A/index.html">CSS Text Formatting</a>
+        </div>
+        <div class="card">
+            <span class="card-label">Practice 4B</span>
+            <p>CSS3 embedded web fonts demonstration.</p>
+            <a href="Practices/Practice4/CSS3Fonts/CSS3Fonts.html">CSS3 Fonts</a>
+        </div>
+    </div>
+
+    <h3>Practice 5</h3>
+    <div class="card-grid">
+        <div class="card">
+            <span class="card-label">Practice 5A</span>
+            <p>Multi-page butterfly and moth site with floats and images.</p>
+            <a href="Practices/Practice5A/index.html">Butterflies &amp; Moths</a>
+        </div>
+        <div class="card">
+            <span class="card-label">Practice 5B</span>
+            <p>Black Goose Bistro summer menu with CSS backgrounds.</p>
+            <a href="Practices/Practice5B/bistro.html">Black Goose Bistro Menu</a>
+        </div>
+    </div>
+
+    <h3>Practice 6</h3>
+    <div class="card-grid">
+        <div class="card">
+            <span class="card-label">Practice 6A</span>
+            <p>HTML table exercises from Chapter 8 (Exercises 8.1, 8.2, 8.3).</p>
+            <a href="Practices/Practice6A/Practice6A-Tables.html">Tables</a>
+        </div>
+        <div class="card">
+            <span class="card-label">Practice 6B</span>
+            <p>Styled class schedule table.</p>
+            <a href="Practices/Practice6B/table.html">Class Schedule Table</a>
+        </div>
+    </div>
+
+    <h3>Practice 7 — CSS Flexbox (Exercises 16-1, 16-2, 16-3)</h3>
+    <div class="card-grid">
+        <div class="card new">
+            <span class="card-label">Practice 7 &mdash; Ex. 16-1</span>
+            <p>Flexbox navigation bar built with <code>display:flex</code> and <code>justify-content:center</code> on the bakery site nav.</p>
+            <a href="Practices/Practice7/bakery-home.html">Bakery Home Page</a>
+        </div>
+        <div class="card new">
+            <span class="card-label">Practice 7 &mdash; Ex. 16-2 &amp; 16-3</span>
+            <p>Flexible online menu using wrapping flex rows, nested column flex containers, <code>margin-top:auto</code> for price alignment, and <code>order:-1</code> to move photos to the top.</p>
+            <a href="Practices/Practice7/flex-menu.html">Bistro Flex Menu</a>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <p>INFO 2420 &mdash; Duke McFarland &mdash; Web Design Portfolio</p>
+</footer>
+
 </body>
 </html>
