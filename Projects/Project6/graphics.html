@@ -2,108 +2,157 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Native Cooking of Utah - Graphics</title>
+<title>Graphics: Native Cooking of Utah</title>
 
-<style type="text/css">
+<style>
+    body {
+        background-color: #FFF8DC;
+        color: #2F4F4F;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 100%;
+        margin: 20px;
+        line-height: 1.6;
+    }
 
-	#thumbs, #image {
-		width: 900px;
-		text-align: center;
-		margin: 0 auto 0 auto;
-		color: #000;
-		background: #FAEBD7;
-		border: solid 1px #D2691E;
-		padding: 5px;
-	}
+    h1 {
+        color: #8B4513;
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 20px;
+    }
 
-	#thumbs {
-		margin-top: 10px;
-	}
+    h2 {
+        color: #D2691E;
+        font-size: 1.5em;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
 
-	#thumbs img {
-		border: solid 1px #8B4513;
-		margin: 5px;
-		cursor: pointer;
-	}
+    h3 {
+        color: #CD853F;
+        font-size: 1.2em;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
 
-	#thumbs img:hover {
-		border-color: #D2691E;
-		opacity: 0.85;
-	}
+    hr {
+        border: 1px solid #D2691E;
+        margin: 30px 0;
+    }
 
-	#image {
-		height: 320px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		padding: 10px;
-	}
+    #pageWrap {
+        max-width: 960px;
+        margin: 0 auto;
+        text-align: center;
+    }
 
-	#image img {
-		max-height: 267px;
-	}
+    .rollover-section {
+        display: inline-flex;
+        align-items: center;
+        gap: 40px;
+        margin: 20px 0;
+    }
 
-	#bottomText {
-		font-family: Georgia, serif;
-		color: #8B4513;
-		font-size: 1.1em;
-		margin-top: 8px;
-	}
+    #thumbs {
+        width: 700px;
+        border: solid 1px #D2691E;
+        text-align: center;
+        margin: 0 auto;
+        color: #2F4F4F;
+        background: #FAEBD7;
+        padding: 10px;
+        margin-top: 10px;
+    }
 
-	.instructions {
-		font-style: italic;
-	}
+    #thumbs img {
+        border: solid 1px #8B4513;
+        margin: 5px;
+        cursor: pointer;
+    }
 
-	#pageWrap {
-		text-align: center;
-	}
+    #thumbs img:hover {
+        border-color: #D2691E;
+        opacity: 0.85;
+    }
 
+    #thumbs p {
+        font-style: italic;
+        color: #5C3317;
+        font-size: 0.9em;
+        margin: 5px 0 10px 0;
+    }
+
+    #image {
+        width: 700px;
+        height: 320px;
+        border: solid 1px #D2691E;
+        background: #FAEBD7;
+        text-align: center;
+        margin: 0 auto;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #image img {
+        max-height: 267px;
+        border: solid 1px #8B4513;
+    }
+
+    #bottomText {
+        font-family: Georgia, serif;
+        color: #8B4513;
+        font-size: 1.1em;
+        margin-top: 8px;
+    }
 </style>
 
 <script language="JavaScript" type="text/javascript">
 
-	PrintButton1 = new Image;
-	PrintButton2 = new Image;
-	logo1 = new Image;
-	logo2 = new Image;
+    PrintButton1 = new Image;
+    PrintButton2 = new Image;
+    logo1 = new Image;
+    logo2 = new Image;
 
-	if (document.images) {
-		PrintButton1.src = "images/print5.gif";
-		PrintButton2.src = "images/print6.gif";
-		logo1.src = "images/logo1.jpg";
-		logo2.src = "images/logo2.jpg";
-	}
+    if (document.images) {
+        PrintButton1.src = "images/print5.gif";
+        PrintButton2.src = "images/print6.gif";
+        logo1.src        = "images/logo1.jpg";
+        logo2.src        = "images/logo2.jpg";
+    }
 
-	var imgArray = new Array(
-		'Image1Lg.jpg',
-		'Image2Lg.jpg',
-		'Image3Lg.jpg',
-		'Image4Lg.jpg'
-	);
+    var imgArray = new Array(
+        'Image1Lg.jpg',
+        'Image2Lg.jpg',
+        'Image3Lg.jpg',
+        'Image4Lg.jpg'
+    );
 
-	var titleArray = new Array(
-		'Raspberry Cake',
-		'Cherry Cheesecake',
-		'Backyard Grill',
-		'Jello Cake'
-	);
+    var titleArray = new Array(
+        'Raspberry Cake',
+        'Cherry Cheesecake',
+        'Backyard Grill',
+        'Jello Cake'
+    );
 
-	var imgPath = "images/fullsize/";
+    var imgPath = "images/fullsize/";
 
-	function swapImage(imgID) {
-		var theImage = document.getElementById('theImage');
-		var textDiv  = document.getElementById('bottomText');
-		theImage.src = imgPath + imgArray[imgID];
-		textDiv.innerHTML = titleArray[imgID];
-	}
+    function swapImage(imgID) {
+        var theImage = document.getElementById('theImage');
+        var textDiv  = document.getElementById('bottomText');
+        theImage.src      = imgPath + imgArray[imgID];
+        textDiv.innerHTML = titleArray[imgID];
+    }
 
-	function preloadImages() {
-		for (var i = 0; i < imgArray.length; i++) {
-			var tmpImg = new Image;
-			tmpImg.src = imgPath + imgArray[i];
-		}
-	}
+    function preloadImages() {
+        for (var i = 0; i < imgArray.length; i++) {
+            var tmpImg = new Image;
+            tmpImg.src = imgPath + imgArray[i];
+        }
+    }
 
 </script>
 
@@ -112,75 +161,72 @@
 
 <div id="pageWrap">
 
-	<!-- ═══ BANNER ═══════════════════════════════════════════════ -->
-	<div>
-		<img src="images/banner.png" alt="Native Cooking of Utah" style="max-width:900px;" />
-	</div>
+    <h1>Native Cooking of Utah &mdash; Graphics</h1>
+    <hr />
 
-	<br />
+    <!-- BANNER -->
+    <h2>Site Banner</h2>
+    <div>
+        <img src="images/banner.png" alt="Native Cooking of Utah Banner" style="max-width:900px;" />
+    </div>
 
-	<!-- ═══ PRINT BUTTON ROLLOVER ════════════════════════════════ -->
-	<div>
-		<a href=""
-		   onmouseover="document.PrintButton.src=PrintButton2.src;"
-		   onmouseout="document.PrintButton.src=PrintButton1.src;">
-			<img src="images/print5.gif"
-			     width="200" height="50"
-			     name="PrintButton"
-			     alt="Print Page"
-			     style="border:none;" />
-		</a>
-	</div>
+    <hr />
 
-	<br />
+    <!-- ROLLOVERS -->
+    <h2>Button &amp; Logo Rollovers</h2>
+    <p style="font-style:italic; color:#5C3317; font-size:0.9em;">Hover over the print button and logo to see the rollover effect.</p>
 
-	<!-- ═══ LOGO ROLLOVER ════════════════════════════════════════ -->
-	<div>
-		<a href=""
-		   onmouseover="document.logoImg.src=logo2.src;"
-		   onmouseout="document.logoImg.src=logo1.src;">
-			<img src="images/logo1.jpg"
-			     width="130" height="165"
-			     name="logoImg"
-			     alt="Native Cooking of Utah Logo"
-			     style="border:none;" />
-		</a>
-	</div>
+    <div class="rollover-section">
 
-	<br /><br />
+        <div>
+            <h3>Print Button</h3>
+            <a href=""
+               onmouseover="document.PrintButton.src=PrintButton2.src;"
+               onmouseout="document.PrintButton.src=PrintButton1.src;">
+                <img src="images/print5.gif"
+                     width="200" height="50"
+                     name="PrintButton"
+                     alt="Print Page"
+                     style="border:none;" />
+            </a>
+        </div>
 
-	<!-- ═══ THUMBNAIL IMAGE SWAP ════════════════════════════════ -->
-	<div id="thumbs">
-		<p class="instructions">Hover over a thumbnail to see the full-size image below.</p>
-		<img src="images/thumbnails/Image1Sm.jpg" alt="Raspberry Cake"    width="150" height="100" onmouseover="swapImage(0);" />
-		<img src="images/thumbnails/Image2Sm.jpg" alt="Cherry Cheesecake" width="150" height="100" onmouseover="swapImage(1);" />
-		<img src="images/thumbnails/Image3Sm.jpg" alt="Backyard Grill"    width="150" height="100" onmouseover="swapImage(2);" />
-		<img src="images/thumbnails/Image4Sm.jpg" alt="Jello Cake"        width="150" height="100" onmouseover="swapImage(3);" />
-	</div>
+        <div>
+            <h3>Logo</h3>
+            <a href=""
+               onmouseover="document.logoImg.src=logo2.src;"
+               onmouseout="document.logoImg.src=logo1.src;">
+                <img src="images/logo1.jpg"
+                     width="130" height="165"
+                     name="logoImg"
+                     alt="Native Cooking of Utah Logo"
+                     style="border:none;" />
+            </a>
+        </div>
 
-	<div id="image">
-		<img id="theImage" src="images/fullsize/Image1Lg.jpg" alt="Raspberry Cake" width="400" height="267" />
-		<h3 id="bottomText">Raspberry Cake</h3>
-	</div>
+    </div>
 
-	<br />
+    <hr />
 
-	<!-- ═══ TWO-COLUMN BACKGROUND PREVIEW ═══════════════════════ -->
-	<div>
-		<img src="images/2colback.jpg" alt="Two-column background slice" style="width:960px; height:40px; display:block; margin:0 auto;" />
-	</div>
+    <!-- THUMBNAIL IMAGE SWAP -->
+    <h2>Thumbnail Image Swap</h2>
 
-	<br /><br />
+    <div id="thumbs">
+        <p>Hover over a thumbnail to see the full-size image below.</p>
+        <img src="images/thumbnails/Image1Sm.jpg" alt="Raspberry Cake"    width="150" height="100" onmouseover="swapImage(0);" />
+        <img src="images/thumbnails/Image2Sm.jpg" alt="Cherry Cheesecake" width="150" height="100" onmouseover="swapImage(1);" />
+        <img src="images/thumbnails/Image3Sm.jpg" alt="Backyard Grill"    width="150" height="100" onmouseover="swapImage(2);" />
+        <img src="images/thumbnails/Image4Sm.jpg" alt="Jello Cake"        width="150" height="100" onmouseover="swapImage(3);" />
+    </div>
 
-</div><!-- /pageWrap -->
+    <div id="image">
+        <img id="theImage" src="images/fullsize/Image1Lg.jpg" alt="Raspberry Cake" width="400" height="267" />
+        <h3 id="bottomText">Raspberry Cake</h3>
+    </div>
 
-<p style="text-align:center;">
-	<a href="http://validator.w3.org/check?uri=referer">
-		<img src="http://www.w3.org/Icons/valid-xhtml10"
-		     alt="Valid XHTML 1.0 Transitional"
-		     height="31" width="88" />
-	</a>
-</p>
+    <br /><br />
+
+</div>
 
 </body>
 </html>
