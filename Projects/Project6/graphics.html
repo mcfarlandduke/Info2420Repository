@@ -31,8 +31,8 @@
     h3 {
         color: #CD853F;
         font-size: 1.2em;
-        margin-top: 20px;
-        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-bottom: 8px;
         text-align: center;
     }
 
@@ -41,28 +41,39 @@
         margin: 30px 0;
     }
 
+    p.note {
+        font-style: italic;
+        color: #5C3317;
+        font-size: 0.9em;
+    }
+
+    /* ── Page wrapper ── */
     #pageWrap {
         max-width: 960px;
         margin: 0 auto;
         text-align: center;
     }
 
+    /* ── Rollover section ── */
     .rollover-section {
         display: inline-flex;
         align-items: center;
-        gap: 40px;
+        gap: 60px;
         margin: 20px 0;
     }
 
+    .rollover-section div {
+        text-align: center;
+    }
+
+    /* ── Thumbnail swap ── */
     #thumbs {
         width: 700px;
         border: solid 1px #D2691E;
-        text-align: center;
-        margin: 0 auto;
-        color: #2F4F4F;
         background: #FAEBD7;
         padding: 10px;
-        margin-top: 10px;
+        margin: 10px auto 0 auto;
+        text-align: center;
     }
 
     #thumbs img {
@@ -72,15 +83,8 @@
     }
 
     #thumbs img:hover {
+        opacity: 0.80;
         border-color: #D2691E;
-        opacity: 0.85;
-    }
-
-    #thumbs p {
-        font-style: italic;
-        color: #5C3317;
-        font-size: 0.9em;
-        margin: 5px 0 10px 0;
     }
 
     #image {
@@ -88,7 +92,6 @@
         height: 320px;
         border: solid 1px #D2691E;
         background: #FAEBD7;
-        text-align: center;
         margin: 0 auto;
         padding: 10px;
         display: flex;
@@ -98,60 +101,70 @@
     }
 
     #image img {
-        max-height: 267px;
         border: solid 1px #8B4513;
     }
 
     #bottomText {
-        font-family: Georgia, serif;
         color: #8B4513;
         font-size: 1.1em;
         margin-top: 8px;
     }
+
+    /* ── Background preview ── */
+    #bgPreview {
+        margin: 20px auto;
+        display: block;
+    }
 </style>
 
-<script language="JavaScript" type="text/javascript">
+<script>
 
-    PrintButton1 = new Image;
-    PrintButton2 = new Image;
-    logo1 = new Image;
-    logo2 = new Image;
+    var printBtn1 = new Image();
+    var printBtn2 = new Image();
+    var logoImg1  = new Image();
+    var logoImg2  = new Image();
 
     if (document.images) {
-        PrintButton1.src = "images/print5.gif";
-        PrintButton2.src = "images/print6.gif";
-        logo1.src        = "images/logo1.jpg";
-        logo2.src        = "images/logo2.jpg";
+        printBtn1.src = "images/print5.gif";
+        printBtn2.src = "images/print6.gif";
+        logoImg1.src  = "images/logo1.jpg";
+        logoImg2.src  = "images/logo2.jpg";
     }
 
-    var imgArray = new Array(
+    var imgArray = [
         'Image1Lg.jpg',
         'Image2Lg.jpg',
         'Image3Lg.jpg',
         'Image4Lg.jpg'
-    );
+    ];
 
-    var titleArray = new Array(
+    var titleArray = [
         'Raspberry Cake',
         'Cherry Cheesecake',
         'Backyard Grill',
         'Jello Cake'
-    );
+    ];
 
     var imgPath = "images/fullsize/";
 
     function swapImage(imgID) {
-        var theImage = document.getElementById('theImage');
-        var textDiv  = document.getElementById('bottomText');
-        theImage.src      = imgPath + imgArray[imgID];
-        textDiv.innerHTML = titleArray[imgID];
+        document.getElementById('theImage').src      = imgPath + imgArray[imgID];
+        document.getElementById('bottomText').innerHTML = titleArray[imgID];
     }
 
     function preloadImages() {
         for (var i = 0; i < imgArray.length; i++) {
-            var tmpImg = new Image;
-            tmpImg.src = imgPath + imgArray[i];
+            var tmp = new Image();
+            tmp.src = imgPath + imgArray[i];
         }
+    }
+
+    function swapPrint(toImg) {
+        document.getElementById('printBtn').src = toImg;
+    }
+
+    function swapLogo(toImg) {
+        document.getElementById('logoBtn').src = toImg;
     }
 
 </script>
@@ -162,69 +175,77 @@
 <div id="pageWrap">
 
     <h1>Native Cooking of Utah &mdash; Graphics</h1>
-    <hr />
+    <hr>
 
     <!-- BANNER -->
     <h2>Site Banner</h2>
-    <div>
-        <img src="images/banner.png" alt="Native Cooking of Utah Banner" style="max-width:900px;" />
-    </div>
+    <img src="images/banner.png" alt="Native Cooking of Utah Banner" style="max-width:900px;">
 
-    <hr />
+    <hr>
 
     <!-- ROLLOVERS -->
     <h2>Button &amp; Logo Rollovers</h2>
-    <p style="font-style:italic; color:#5C3317; font-size:0.9em;">Hover over the print button and logo to see the rollover effect.</p>
+    <p class="note">Hover over the print button and logo to see the rollover effect.</p>
 
     <div class="rollover-section">
 
         <div>
             <h3>Print Button</h3>
             <a href=""
-               onmouseover="document.PrintButton.src=PrintButton2.src;"
-               onmouseout="document.PrintButton.src=PrintButton1.src;">
-                <img src="images/print5.gif"
+               onmouseover="swapPrint(printBtn2.src);"
+               onmouseout="swapPrint(printBtn1.src);">
+                <img id="printBtn"
+                     src="images/print5.gif"
                      width="200" height="50"
-                     name="PrintButton"
                      alt="Print Page"
-                     style="border:none;" />
+                     style="border:none;">
             </a>
         </div>
 
         <div>
             <h3>Logo</h3>
             <a href=""
-               onmouseover="document.logoImg.src=logo2.src;"
-               onmouseout="document.logoImg.src=logo1.src;">
-                <img src="images/logo1.jpg"
+               onmouseover="swapLogo(logoImg2.src);"
+               onmouseout="swapLogo(logoImg1.src);">
+                <img id="logoBtn"
+                     src="images/logo1.jpg"
                      width="130" height="165"
-                     name="logoImg"
                      alt="Native Cooking of Utah Logo"
-                     style="border:none;" />
+                     style="border:none;">
             </a>
         </div>
 
     </div>
 
-    <hr />
+    <hr>
 
     <!-- THUMBNAIL IMAGE SWAP -->
     <h2>Thumbnail Image Swap</h2>
 
     <div id="thumbs">
-        <p>Hover over a thumbnail to see the full-size image below.</p>
-        <img src="images/thumbnails/Image1Sm.jpg" alt="Raspberry Cake"    width="150" height="100" onmouseover="swapImage(0);" />
-        <img src="images/thumbnails/Image2Sm.jpg" alt="Cherry Cheesecake" width="150" height="100" onmouseover="swapImage(1);" />
-        <img src="images/thumbnails/Image3Sm.jpg" alt="Backyard Grill"    width="150" height="100" onmouseover="swapImage(2);" />
-        <img src="images/thumbnails/Image4Sm.jpg" alt="Jello Cake"        width="150" height="100" onmouseover="swapImage(3);" />
+        <p class="note">Hover over a thumbnail to see the full-size image below.</p>
+        <img src="images/thumbnails/Image1Sm.jpg" alt="Raspberry Cake"    width="150" height="100" onmouseover="swapImage(0);">
+        <img src="images/thumbnails/Image2Sm.jpg" alt="Cherry Cheesecake" width="150" height="100" onmouseover="swapImage(1);">
+        <img src="images/thumbnails/Image3Sm.jpg" alt="Backyard Grill"    width="150" height="100" onmouseover="swapImage(2);">
+        <img src="images/thumbnails/Image4Sm.jpg" alt="Jello Cake"        width="150" height="100" onmouseover="swapImage(3);">
     </div>
 
     <div id="image">
-        <img id="theImage" src="images/fullsize/Image1Lg.jpg" alt="Raspberry Cake" width="400" height="267" />
+        <img id="theImage" src="images/fullsize/Image1Lg.jpg" alt="Raspberry Cake" width="400" height="267">
         <h3 id="bottomText">Raspberry Cake</h3>
     </div>
 
-    <br /><br />
+    <hr>
+
+    <!-- TWO-COLUMN BACKGROUND -->
+    <h2>Two-Column Background Image</h2>
+    <p class="note">900px wide &mdash; left column 250px (brown) / right column 650px (cream). Tiles vertically in Project 7.</p>
+    <img id="bgPreview" src="images/2colback.jpg"
+         alt="Two-column background slice"
+         width="900" height="60"
+         style="display:block; margin:0 auto; height:60px; object-fit:fill;">
+
+    <br><br>
 
 </div>
 
