@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Duke McFarland's Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duke McFarland — INFO 2420 Portfolio</title>
     <style>
         * {
             box-sizing: border-box;
@@ -44,27 +45,25 @@
             padding: 0 2em;
         }
 
-        /* ---- Section headings ---- */
         h2 {
             color: #8B4513;
             font-size: 1.5em;
             border-bottom: 2px solid #D2691E;
             padding-bottom: .3em;
-            margin-top: 1.8em;
+            margin-top: 2em;
         }
 
         h3 {
             color: #D2691E;
-            font-size: 1.1em;
-            margin: 1.2em 0 .4em 0;
+            font-size: 1.05em;
+            margin: 1.4em 0 .5em 0;
         }
 
-        /* ---- Card grid ---- */
         .card-grid {
             display: flex;
             flex-flow: row wrap;
             gap: 1em;
-            margin-top: .75em;
+            margin-top: .5em;
         }
 
         .card {
@@ -72,11 +71,11 @@
             border: 1px solid #D2691E;
             border-radius: .5em;
             padding: 1em 1.2em;
-            flex: 1 1 260px;
-            max-width: 320px;
+            flex: 1 1 240px;
+            max-width: 300px;
         }
 
-        .card .card-label {
+        .card-label {
             display: inline-block;
             background-color: #8B4513;
             color: #FFF8DC;
@@ -111,28 +110,6 @@
             color: #FFF8DC;
         }
 
-        /* multiple links in one card */
-        .card .link-list {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .card .link-list li {
-            margin-bottom: .4em;
-        }
-
-        /* highlight badge for new practice */
-        .card.new {
-            border-color: #8B4513;
-            border-width: 2px;
-            background-color: #FFF0D0;
-        }
-
-        .card.new .card-label {
-            background-color: #D2691E;
-        }
-
         footer {
             background-color: #5C3317;
             color: #FFF8DC;
@@ -155,11 +132,11 @@
     <!-- ==================== PROJECTS ==================== -->
     <h2>Projects</h2>
 
-    <h3>Project 1</h3>
+    <h3>Project 1 &mdash; Website Critique</h3>
     <div class="card-grid">
         <div class="card">
             <span class="card-label">Project 1</span>
-            <p>Web Site Critique</p>
+            <p>Written critique analyzing the design and usability of an existing website.</p>
             <a href="Projects/project1.htm">View Project</a>
         </div>
     </div>
@@ -168,12 +145,12 @@
     <div class="card-grid">
         <div class="card">
             <span class="card-label">Project 2</span>
-            <p>About Us page for Native Cooking of Utah.</p>
+            <p>About Us page built with basic HTML structure and content.</p>
             <a href="Projects/project2/AboutUs.html">About Us</a>
         </div>
         <div class="card">
             <span class="card-label">Project 2</span>
-            <p>Tributes page for Native Cooking of Utah.</p>
+            <p>Tributes page built with basic HTML structure and content.</p>
             <a href="Projects/project2/Tributes.html">Tributes</a>
         </div>
     </div>
@@ -182,17 +159,17 @@
     <div class="card-grid">
         <div class="card">
             <span class="card-label">Project 3</span>
-            <p>About Us page with enhanced styling.</p>
+            <p>About Us page with enhanced CSS styling.</p>
             <a href="Projects/Project3/AboutUs.html">About Us</a>
         </div>
         <div class="card">
             <span class="card-label">Project 3</span>
-            <p>Tributes page with enhanced styling.</p>
+            <p>Tributes page with enhanced CSS styling.</p>
             <a href="Projects/Project3/Tributes.html">Tributes</a>
         </div>
         <div class="card">
             <span class="card-label">Project 3</span>
-            <p>Site design document.</p>
+            <p>Site design document outlining layout and style decisions.</p>
             <a href="Projects/Project3/SiteDesign.html">Site Design</a>
         </div>
     </div>
@@ -201,12 +178,12 @@
     <div class="card-grid">
         <div class="card">
             <span class="card-label">Project 4</span>
-            <p>About Us page with tables and custom fonts.</p>
+            <p>About Us page with HTML tables and custom web fonts.</p>
             <a href="Projects/Project4/AboutUs.html">About Us</a>
         </div>
         <div class="card">
             <span class="card-label">Project 4</span>
-            <p>Tributes page with tables and custom fonts.</p>
+            <p>Tributes page with HTML tables and custom web fonts.</p>
             <a href="Projects/Project4/Tributes.html">Tributes</a>
         </div>
     </div>
@@ -215,27 +192,26 @@
     <div class="card-grid">
         <div class="card">
             <span class="card-label">Project 5</span>
-            <p>Splash page featuring the site imagemap graphic.</p>
+            <p>Splash page featuring a custom site imagemap graphic.</p>
             <a href="Projects/Project5/index.html">Splash Page</a>
         </div>
         <div class="card">
             <span class="card-label">Project 5</span>
-            <p>Graphics page showing the banner, logo, and imagemap.</p>
+            <p>Graphics page displaying the site banner, logo, and imagemap.</p>
             <a href="Projects/Project5/graphics.html">Graphics</a>
         </div>
         <div class="card">
             <span class="card-label">Project 5</span>
-            <p>Site color palette and design document.</p>
+            <p>Site design document with color palette and layout plan.</p>
             <a href="Projects/Project5/SiteDesign.html">Site Design</a>
         </div>
     </div>
-
 
     <h3>Project 6 &mdash; Native Cooking of Utah</h3>
     <div class="card-grid">
         <div class="card">
             <span class="card-label">Project 6</span>
-            <p>Graphics page with JavaScript print button rollover, logo rollover, and thumbnail image swap.</p>
+            <p>Graphics page with JavaScript rollovers, logo hover effect, and thumbnail image swap.</p>
             <a href="Projects/Project6/graphics.html">Graphics</a>
         </div>
     </div>
@@ -244,104 +220,104 @@
     <!-- ==================== PRACTICES ==================== -->
     <h2>Practice Assignments</h2>
 
-    <h3>Practice 2</h3>
+    <h3>Practice 2 &mdash; Basic HTML</h3>
     <div class="card-grid">
         <div class="card">
             <span class="card-label">Practice 2</span>
-            <p>Basic HTML page about a cactus.</p>
+            <p>Introductory HTML page about a cactus.</p>
             <a href="Practices/Practice2/cactus.html">Cactus Page</a>
         </div>
         <div class="card">
             <span class="card-label">Practice 2</span>
-            <p>Practice 2 instructions PDF.</p>
+            <p>Assignment instructions PDF.</p>
             <a href="Practices/Practice2/HTMLPractice2.pdf">Instructions (PDF)</a>
         </div>
     </div>
 
-    <h3>Practice 3</h3>
+    <h3>Practice 3 &mdash; Multi-page Sites</h3>
     <div class="card-grid">
         <div class="card">
-            <span class="card-label">Practice 3</span>
-            <p>Multi-page HTML site with internal navigation.</p>
-            <a href="Practices/Practice3/HTML3Files/index.html">HTML3 Site</a>
+            <span class="card-label">Practice 3A</span>
+            <p>Multi-page HTML site with internal navigation links.</p>
+            <a href="Practices/Practice3/HTML3Files/index.html">Multi-page Site</a>
         </div>
         <div class="card">
             <span class="card-label">Practice 3B</span>
-            <p>HTML glossary page with definition lists.</p>
+            <p>Glossary page using HTML definition lists.</p>
             <a href="Practices/Practice3/practice3b/glossary.html">Glossary</a>
         </div>
     </div>
 
-    <h3>Practice 4</h3>
+    <h3>Practice 4 &mdash; CSS Text &amp; Fonts</h3>
     <div class="card-grid">
         <div class="card">
             <span class="card-label">Practice 4A</span>
-            <p>CSS text formatting exercises.</p>
-            <a href="Practices/Practice4/HTML4A/index.html">CSS Text Formatting</a>
+            <p>CSS text formatting and typography exercises.</p>
+            <a href="Practices/Practice4/HTML4A/index.html">Text Formatting</a>
         </div>
         <div class="card">
             <span class="card-label">Practice 4B</span>
             <p>CSS3 embedded web fonts demonstration.</p>
-            <a href="Practices/Practice4/CSS3Fonts/CSS3Fonts.html">CSS3 Fonts</a>
+            <a href="Practices/Practice4/CSS3Fonts/CSS3Fonts.html">Web Fonts</a>
         </div>
     </div>
 
-    <h3>Practice 5</h3>
+    <h3>Practice 5 &mdash; Layouts &amp; Backgrounds</h3>
     <div class="card-grid">
         <div class="card">
             <span class="card-label">Practice 5A</span>
-            <p>Multi-page butterfly and moth site with floats and images.</p>
+            <p>Multi-page butterfly and moth site using CSS floats and images.</p>
             <a href="Practices/Practice5A/index.html">Butterflies &amp; Moths</a>
         </div>
         <div class="card">
             <span class="card-label">Practice 5B</span>
-            <p>Black Goose Bistro summer menu with CSS backgrounds.</p>
-            <a href="Practices/Practice5B/bistro.html">Black Goose Bistro Menu</a>
+            <p>Black Goose Bistro summer menu with CSS background techniques.</p>
+            <a href="Practices/Practice5B/bistro.html">Bistro Menu</a>
         </div>
     </div>
 
-    <h3>Practice 6</h3>
+    <h3>Practice 6 &mdash; HTML Tables</h3>
     <div class="card-grid">
         <div class="card">
             <span class="card-label">Practice 6A</span>
-            <p>HTML table exercises from Chapter 8 (Exercises 8.1, 8.2, 8.3).</p>
+            <p>HTML table exercises covering structure, spanning, and nesting.</p>
             <a href="Practices/Practice6A/Practice6A-Tables.html">Tables</a>
         </div>
         <div class="card">
             <span class="card-label">Practice 6B</span>
-            <p>Styled class schedule table.</p>
-            <a href="Practices/Practice6B/table.html">Class Schedule Table</a>
+            <p>Styled class schedule built with an HTML table.</p>
+            <a href="Practices/Practice6B/table.html">Class Schedule</a>
         </div>
     </div>
 
-    <h3>Practice 7 &mdash; CSS Flexbox (Exercises 16-1, 16-2, 16-3)</h3>
+    <h3>Practice 7 &mdash; CSS Flexbox</h3>
     <div class="card-grid">
-        <div class="card new">
-            <span class="card-label">Practice 7 &mdash; Ex. 16-1</span>
-            <p>Flexbox navigation bar built with <code>display:flex</code> and <code>justify-content:center</code> on the bakery site nav.</p>
-            <a href="Practices/Practice7/bakery-home.html">Bakery Home Page</a>
+        <div class="card">
+            <span class="card-label">Practice 7A</span>
+            <p>Flexbox navigation bar using <code>display:flex</code> and <code>justify-content</code>.</p>
+            <a href="Practices/Practice7/bakery-home.html">Bakery Home</a>
         </div>
-        <div class="card new">
-            <span class="card-label">Practice 7 &mdash; Ex. 16-2 &amp; 16-3</span>
-            <p>Flexible online menu using wrapping flex rows, nested column flex containers, <code>margin-top:auto</code> for price alignment, and <code>order:-1</code> to move photos to the top.</p>
+        <div class="card">
+            <span class="card-label">Practice 7B</span>
+            <p>Flexible online menu with wrapping rows, nested columns, and <code>order</code> property.</p>
             <a href="Practices/Practice7/flex-menu.html">Bistro Flex Menu</a>
         </div>
     </div>
 
-    <h3>Practice &mdash; Week 7 &amp; 8 (Photoshop)</h3>
+    <h3>Practice 8 &mdash; Photoshop</h3>
     <div class="card-grid">
         <div class="card">
-            <span class="card-label">Week 7 &amp; 8</span>
-            <p>Photoshop practice files covering basics, layers, selection tools, image resizing, photo enhancement, combining images, text &amp; shapes, and graphic design.</p>
-            <a href="Practices/Week7-8-Photoshop/index.html">View All Files</a>
+            <span class="card-label">Practice 8</span>
+            <p>Photoshop exercises covering layers, selection tools, photo enhancement, image combining, and graphic design.</p>
+            <a href="Practices/Week7-8-Photoshop/index.html">Photoshop Files</a>
         </div>
     </div>
 
-    <h3>Practice &mdash; Work with HTML Text</h3>
+    <h3>Practice 9 &mdash; Working with HTML Text</h3>
     <div class="card-grid">
-        <div class="card new">
-            <span class="card-label">HTML Text</span>
-            <p>Completed the &ldquo;Rendered&rdquo; art exhibition page by filling in navigation, hero headings, intro text, artwork section, and footer into a skeleton HTML file.</p>
+        <div class="card">
+            <span class="card-label">Practice 9</span>
+            <p>Completed the &ldquo;Rendered&rdquo; art exhibition page by populating a skeleton file with navigation, hero headings, intro text, artwork section, and footer.</p>
             <a href="Practices/PracticeHTMLText/rendered-index.html">Rendered Page</a>
         </div>
     </div>
