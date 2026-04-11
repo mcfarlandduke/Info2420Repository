@@ -1,0 +1,329 @@
+/* ============================================================
+   mystyles.css — Native Cooking of Utah
+   External stylesheet for Project 8
+   ============================================================ */
+
+/* ── Web Fonts ── */
+
+@font-face {
+    font-family: 'Bendable BRK';
+    src: url('Fonts/bendable.eot');
+    src: url('Fonts/bendable.ttf') format('truetype');
+}
+
+/* ── Base styles ── */
+
+body {
+    background-color: #FFF8DC;
+    color: #2F4F4F;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #8B4513;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #D2691E;
+    font-size: 1.5em;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #CD853F;
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+ul {
+    margin-bottom: 15px;
+}
+
+a:link {
+    color: #B8860B;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:visited {
+    color: #8B7355;
+}
+
+a:hover {
+    color: #FF8C00;
+    text-decoration: underline;
+}
+
+hr {
+    border: 1px solid #D2691E;
+    margin: 20px 0;
+}
+
+.floatleft {
+    float: left;
+    margin: 0 20px 15px 0;
+}
+
+.floatright {
+    float: right;
+    margin: 0 0 15px 20px;
+}
+
+/* ── Page container ── */
+
+#container {
+    width: 900px;
+    margin: 0 auto;
+}
+
+/* ── Header ── */
+
+header {
+    width: 900px;
+    background-color: #8B4513;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* ── Nav (nested inside header, floats right) ── */
+
+nav {
+    float: right;
+    width: 30%;
+    background-color: #5C3317;
+    box-sizing: border-box;
+    padding: 10px 8px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-bottom: 6px;
+}
+
+nav ul li a {
+    display: block;
+    background-color: #3B1A0A;
+    color: #FFF8DC;
+    text-align: center;
+    padding: 9px 5px;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #D2691E;
+}
+
+nav ul li a:visited {
+    color: #F5DEB3;
+}
+
+nav ul li a:hover {
+    background-color: #D2691E;
+    color: #FFF8DC;
+    text-decoration: none;
+}
+
+/* ── Logo image in header ── */
+
+.logo-link {
+    float: left;
+    border: none;
+}
+
+.logo-img {
+    border: none;
+    display: block;
+    padding: 10px;
+}
+
+/* ── Banner image in header ── */
+
+.banner-img {
+    display: block;
+    max-width: 100%;
+    padding: 10px 0 0 10px;
+    box-sizing: border-box;
+}
+
+/* ── Section ── */
+
+section {
+    width: 900px;
+    background-image: url('Images/2colback.jpg');
+    background-repeat: repeat-y;
+    overflow: hidden;
+}
+
+/* ── Article ── */
+
+article {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+article p {
+    text-align: left;
+}
+
+/* ── Thumbnail image swap ── */
+
+#thumbs {
+    border: solid 1px #D2691E;
+    background: #FAEBD7;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+#thumbs img {
+    border: solid 1px #8B4513;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#thumbs img:hover {
+    opacity: 0.80;
+    border-color: #D2691E;
+}
+
+#image {
+    border: solid 1px #D2691E;
+    background: #FAEBD7;
+    padding: 10px;
+    text-align: center;
+}
+
+#image img {
+    border: solid 1px #8B4513;
+    max-width: 100%;
+}
+
+#bottomText {
+    color: #8B4513;
+    font-size: 1.1em;
+    margin-top: 8px;
+}
+
+/* ── Mini tribute ── */
+
+.mini-tribute {
+    overflow: hidden;
+    margin-top: 10px;
+    background-color: #FAEBD7;
+    border: 1px solid #D2691E;
+    padding: 15px;
+}
+
+.mini-tribute img {
+    float: left;
+    margin: 0 20px 10px 0;
+    border: 1px solid #8B4513;
+}
+
+.mini-tribute p {
+    text-align: left;
+}
+
+/* ── Table styles (AboutUs page) ── */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    font-size: 0.95em;
+    color: #2F4F4F;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+caption {
+    font-family: 'Bendable BRK', Georgia, serif;
+    font-size: 1.6em;
+    color: #8B4513;
+    text-align: left;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #D2691E;
+    margin-bottom: 6px;
+}
+
+th {
+    background-color: #8B4513;
+    color: #FFF8DC;
+    font-size: 1em;
+    padding: 10px 14px;
+    text-align: left;
+    border: none;
+}
+
+td {
+    background-color: #FAEBD7;
+    color: #3B2A1A;
+    padding: 9px 14px;
+    border: 1px solid #D2691E;
+    vertical-align: top;
+}
+
+tr:nth-child(even) td {
+    background-color: #F5DEB3;
+}
+
+/* ── Print button ── */
+
+.print-btn {
+    display: block;
+    margin: 20px 0;
+}
+
+.print-btn img {
+    border: none;
+    cursor: pointer;
+}
+
+/* ── Footer ── */
+
+footer {
+    width: 900px;
+    background-color: #5C3317;
+    color: #FFF8DC;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    clear: both;
+}
+
+footer p {
+    margin: 5px 0;
+    color: #FFF8DC;
+}
+
+footer a:link {
+    color: #F5DEB3;
+    font-weight: bold;
+}
+
+footer a:visited {
+    color: #D2B48C;
+}
+
+footer a:hover {
+    color: #FF8C00;
+    text-decoration: underline;
+}

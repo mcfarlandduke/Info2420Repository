@@ -1,0 +1,178 @@
+/* ============================================================
+   print.css — Native Cooking of Utah
+   Print-friendly stylesheet for Project 8
+   ============================================================ */
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+h1 {
+    color: #000000;
+    font-size: 18pt;
+    margin-bottom: 12pt;
+}
+
+h2 {
+    color: #000000;
+    font-size: 14pt;
+    margin-top: 16pt;
+    margin-bottom: 10pt;
+}
+
+h3 {
+    color: #000000;
+    font-size: 12pt;
+    margin-top: 12pt;
+    margin-bottom: 8pt;
+}
+
+p {
+    margin-bottom: 10pt;
+}
+
+a:link, a:visited {
+    color: #000000;
+    text-decoration: underline;
+}
+
+hr {
+    border: 1px solid #000000;
+    margin: 12pt 0;
+}
+
+/* ── Container: full width for print ── */
+
+#container {
+    width: 100%;
+    margin: 0;
+}
+
+/* ── Header: full width ── */
+
+header {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+/* ── Hide nav for print ── */
+
+nav {
+    display: none;
+}
+
+/* ── Section: full width ── */
+
+section {
+    width: 100%;
+    background-image: none;
+    background-color: #ffffff;
+}
+
+/* ── Article: 95% width with margins ── */
+
+article {
+    width: 95%;
+    margin: 0 auto;
+    padding: 10pt;
+    box-sizing: border-box;
+    float: none;
+}
+
+article p {
+    text-align: left;
+}
+
+/* ── Remove right column float ── */
+
+.floatright {
+    float: none;
+    margin: 0 0 10pt 0;
+}
+
+.floatleft {
+    float: none;
+    margin: 0 0 10pt 0;
+}
+
+/* ── Hide print button for print ── */
+
+.print-btn {
+    display: none;
+}
+
+/* ── Table styles ── */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10pt;
+    margin-top: 10pt;
+    margin-bottom: 12pt;
+}
+
+caption {
+    font-size: 13pt;
+    color: #000000;
+    text-align: left;
+    padding-bottom: 6pt;
+    border-bottom: 1px solid #000000;
+    margin-bottom: 4pt;
+}
+
+th {
+    background-color: #cccccc;
+    color: #000000;
+    padding: 6pt 10pt;
+    text-align: left;
+    border: 1px solid #000000;
+}
+
+td {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 6pt 10pt;
+    border: 1px solid #000000;
+    vertical-align: top;
+}
+
+tr:nth-child(even) td {
+    background-color: #f0f0f0;
+}
+
+/* ── Thumbnail swap section: hide for print ── */
+
+#thumbs {
+    display: none;
+}
+
+#image {
+    border: 1px solid #000000;
+    background: #ffffff;
+    padding: 6pt;
+    text-align: center;
+}
+
+/* ── Hide footer for print ── */
+
+footer {
+    display: none;
+}
+
+/* ── Logo / banner ── */
+
+.logo-img {
+    display: block;
+    padding: 5pt;
+}
+
+.banner-img {
+    display: block;
+    max-width: 100%;
+}
